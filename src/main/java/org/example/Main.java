@@ -1,9 +1,37 @@
 package org.example;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 public class Main
 {
     public static void main(String[] args)
     {
-        System.out.println("===Klient===");
+        Manager manager1 = new Manager("Jarek", "Nowak", "jarek@gmail.com", "888777666", 8000.0);
+        Pracownik pracownik1 = new Pracownik("Andrzej", "Kowalski", "Kasjer", "andrzej@gmail.com", 4000.0);
+        Pracownik pracownik2 = new Pracownik("Asia", "Kowalska", "Kasjer", "asia@gmail.com", 4000.0);
+        Product product1 = new Product("bułka", 0.6);
+        Product product2 = new Product("jabłko", 0.9);
+        Product product3 = new Product("banan", 1.1);
+        Shop shop1 = new Shop(
+                "Żabka",
+                "Spożywczy",
+                "Sopot", manager1,
+                Set.of(pracownik1, pracownik2),
+                List.of(product1, product2, product3)
+        );
+
+        System.out.println(shop1.getManager().getName() + " " + shop1.getManager().getSurname());
+        shop1.getProducts().stream()
+                .filter(product -> product.getPrice() < 1)
+                .forEach(product -> {
+                    product.setPrice(product.getPrice() + 10);
+                            System.out.println(product.getPrice());
+                }
+                );
+
+     /*   System.out.println("===Klient===");
 
         Client client1 = new Client("Andrzej", "Nowak", "Polska", "500984123", 20);
         System.out.println("imie klienta: " + client1.getName());
@@ -47,6 +75,6 @@ public class Main
         System.out.println("Nowy numer telefonu managera: " + manager1.getTelefon());
         System.out.println("Pensja managera: " + manager1.getPensja());
         manager1.promote("Starszy manager", 0.15);
-        System.out.println("Pensja managera po awansie: " + manager1.getPensja());
+        System.out.println("Pensja managera po awansie: " + manager1.getPensja());*/
     }
 }

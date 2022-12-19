@@ -6,21 +6,16 @@ public class Manager
 
     private String surname;
 
-    private String stanowisko;
-    private String podwladny;
-
     private String email;
 
     private String telefon;
 
     private double pensja;
 
-    public Manager(String newName, String newSurname, String newStanowisko, String newPodwladny, String newEmail, String newTelefon, double newPensja)
+    public Manager(String newName, String newSurname, String newEmail, String newTelefon, double newPensja)
     {
         name = newName;
         surname = newSurname;
-        stanowisko = newStanowisko;
-        podwladny = newPodwladny;
         email = newEmail;
         telefon = newTelefon;
         pensja = newPensja;
@@ -36,11 +31,6 @@ public class Manager
         return surname;
     }
 
-    public String getStanowisko()
-    {
-        return stanowisko;
-    }
-    public String getPodwladny() { return podwladny; }
 
     public String getEmail()
     {
@@ -63,11 +53,6 @@ public class Manager
         surname = newSurname;
     }
 
-    public void setStanowisko(String newStanowisko)
-    {
-        stanowisko = newStanowisko;
-    }
-    public void setPodwladny(String newPodwladny) { podwladny = newPodwladny; }
 
     public void setEmail(String newEmail)
     {
@@ -78,12 +63,5 @@ public class Manager
     public void setPensja(double newPensja)
     {
         pensja = newPensja;
-    }
-
-    public void promote(String newStanowisko, double increasePercentage)
-    {
-        stanowisko = newStanowisko;
-        pensja = pensja + (pensja*increasePercentage);
-        System.out.println("Awans managera na stanowisko: " + newStanowisko);
     }
 }
