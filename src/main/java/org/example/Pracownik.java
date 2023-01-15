@@ -1,6 +1,10 @@
 package org.example;
 
+import lombok.ToString;
+
 import java.sql.SQLOutput;
+
+@ToString
 
 public class Pracownik
     {
@@ -14,13 +18,16 @@ public class Pracownik
 
         private double pensja;
 
-        public Pracownik(String newName, String newSurname, String newStanowisko, String newEmail, double newPensja)
+        private Manager manager;
+
+        public Pracownik(String newName, String newSurname, String newStanowisko, String newEmail, double newPensja, Manager newManager)
         {
             name = newName;
             surname = newSurname;
             stanowisko = newStanowisko;
             email = newEmail;
             pensja = newPensja;
+            manager = newManager;
         }
 
         public String getName()
@@ -46,6 +53,15 @@ public class Pracownik
         public double getPensja()
         {
             return pensja;
+        }
+
+
+        public Manager getManager() {
+            return manager;
+        }
+
+        public void setManager(Manager manager) {
+            this.manager = manager;
         }
 
         public void setName(String newName)
@@ -79,4 +95,5 @@ public class Pracownik
             pensja = pensja + (pensja*increasePercentage);
             System.out.println("Awans pracownika na stanowisko: " + newStanowisko);
         }
-}
+
+    }
