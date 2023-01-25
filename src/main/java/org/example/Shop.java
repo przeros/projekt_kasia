@@ -1,32 +1,23 @@
 package org.example;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
-import java.security.PublicKey;
 import java.util.*;
 
-
-@Getter
-@ToString
-@Setter
 @AllArgsConstructor
-
-public class Shop
+@ToString
+public abstract class Shop
 {
-    String name;
+    private String name;
 
-    String type;
+    private String location;
 
-    String location;
+    private Manager manager;
 
-    Manager manager;
+    private Set<Employee> workers;
 
-    Set<Employee> workers;
-
-    List<Product> products;
+    private List<Product> products;
 
 
 }

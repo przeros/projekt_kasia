@@ -9,7 +9,6 @@ import lombok.ToString;
 @ToString
 @Setter
 @AllArgsConstructor
-
 public class Client
 {
     private String name;

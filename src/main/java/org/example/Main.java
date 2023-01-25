@@ -15,13 +15,14 @@ public class Main
         Product product1 = new Product("bułka", 0.6);
         Product product2 = new Product("jabłko", 0.9);
         Product product3 = new Product("banan", 1.1);
-        Shop shop1 = new Shop(
+        Shop shop1 = new Grocery(
                 "Żabka",
-                "Spożywczy",
-                "Sopot", manager1,
+                "Sopot",
+                manager1,
                 Set.of(employee1, employee2),
                 List.of(product1, product2, product3)
         );
+        Warehouse warehouse1 = new Warehouse();
 
         //System.out.println(shop1.getManager().getName() + " " + shop1.getManager().getSurname());
         //System.out.println(manager1);//wyświetla się numer referencji,
@@ -34,7 +35,6 @@ public class Main
         //wypisywanie za pomocą strumienia
         listofObject.forEach(System.out::println);
 
-        System.out.println(client1.getMoney());
 
 /*        shop1.getProducts().stream()
                 .filter(product -> product.getPrice() < 1)

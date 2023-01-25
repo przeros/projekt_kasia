@@ -1,9 +1,6 @@
 package org.example;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 import java.util.Set;
@@ -12,16 +9,16 @@ import java.util.Set;
 @ToString
 @Setter
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class Warehouse {
 
-    String location;
+    private String location;
 
-    Manager manager;
+    private Manager manager;
 
-    Set<Employee> workers;
+    private Set<Employee> workers;
 
-    List<Product> products;
+    private List<Product> products;
 
 
 }

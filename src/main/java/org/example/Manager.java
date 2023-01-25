@@ -1,15 +1,12 @@
 package org.example;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @ToString
 @Setter
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class Manager
 {
     private String name;

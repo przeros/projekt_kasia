@@ -12,14 +12,17 @@ import java.util.Set;
 @ToString
 @Setter
 @AllArgsConstructor
-
 public class Supplier {
 
-    String location;
+    private String name;
 
-    Manager manager;
+    private String surname;
 
-    List<Product> products;
+    private Shop destinationShop;
+
+    private Manager manager;
+
+    private List<Product> products;
 
 
 }
