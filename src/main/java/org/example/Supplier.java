@@ -5,22 +5,21 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+import java.util.Set;
+
 @Getter
 @ToString
 @Setter
 @AllArgsConstructor
 
-public class Manager
-{
-    private String name;
+public class Supplier {
 
-    private String surname;
+    String location;
 
-    private String email;
+    Manager manager;
 
-    private String phone;
-
-    private double salary;
+    List<Product> products;
 
 
 }

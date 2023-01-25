@@ -24,7 +24,7 @@ public class Shop
 
     Manager manager;
 
-    Set<Pracownik> workers;
+    Set<Employee> workers;
 
     List<Product> products;
 

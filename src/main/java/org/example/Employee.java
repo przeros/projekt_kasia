@@ -6,27 +6,27 @@ import java.sql.SQLOutput;
 
 @ToString
 
-public class Pracownik
+public class Employee
     {
         private String name;
 
         private String surname;
 
-        private String stanowisko;//po angielsku pisać!
+        private String position;
 
         private String email;
 
-        private double pensja;
+        private double salary;
 
         private Manager manager;
 
-        public Pracownik(String newName, String newSurname, String newStanowisko, String newEmail, double newPensja, Manager newManager)
+        public Employee(String newName, String newSurname, String newPosition, String newEmail, double newSalary, Manager newManager)
         {
             name = newName;
             surname = newSurname;
-            stanowisko = newStanowisko;
+            position = newPosition;
             email = newEmail;
-            pensja = newPensja;
+            salary = newSalary;
             manager = newManager;
         }
 
@@ -40,9 +40,9 @@ public class Pracownik
             return surname;
         }
 
-        public String getStanowisko()
+        public String getPosition()
         {
-            return stanowisko;
+            return position;
         }
 
         public String getEmail()
@@ -50,9 +50,9 @@ public class Pracownik
             return email;
         }
 
-        public double getPensja()
+        public double getSalary()
         {
-            return pensja;
+            return salary;
         }
 
 
@@ -74,9 +74,9 @@ public class Pracownik
             surname = newSurname;
         }
 
-        public void setStanowisko(String newStanowisko)
+        public void setPosition(String newPosition)
         {
-            stanowisko = newStanowisko;
+            position = newPosition;
         }
 
         public void setEmail(String newEmail)
@@ -84,16 +84,16 @@ public class Pracownik
             email = newEmail;
         }
 
-        public void setPensja(double newPensja)
+        public void setSalary(double newSalary)
         {
-            pensja = newPensja;
+            salary = newSalary;
         }
 
-        public void promote(String newStanowisko, double increasePercentage)
+        public void promote(String newPosition, double increasePercentage)
         {
-            stanowisko = newStanowisko;
-            pensja = pensja + (pensja*increasePercentage);
-            System.out.println("Awans pracownika na stanowisko: " + newStanowisko);
+            position = newPosition;
+            salary = salary + (salary*increasePercentage);
+            System.out.println("Awans pracownika na stanowisko: " + newPosition);
         }
 
     }
