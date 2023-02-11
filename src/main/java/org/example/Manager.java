@@ -7,6 +7,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Manager
 {
     private String name;
@@ -19,5 +20,10 @@ public class Manager
 
     private double salary;
 
+    private Shop shop;
+
+    void hire(Employee newEmployee) {
+        shop.workers.add(newEmployee);
+    }
 
 }

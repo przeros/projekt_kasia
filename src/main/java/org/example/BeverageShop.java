@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 @Getter
-@ToString
 @Setter
 public class BeverageShop extends Shop {
 

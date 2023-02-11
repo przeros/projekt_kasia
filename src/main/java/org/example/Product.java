@@ -1,14 +1,12 @@
 package org.example;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @ToString
 @Setter
 @AllArgsConstructor
+@Builder
 public class Product
 {
     private String name;

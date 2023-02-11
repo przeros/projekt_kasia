@@ -1,23 +1,32 @@
 package org.example;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.ToString;
 
 import java.util.*;
 
 @AllArgsConstructor
 @ToString
+@Builder
 public abstract class Shop
 {
-    private String name;
+    protected String name;
 
-    private String location;
+    protected String location;
 
-    private Manager manager;
+    protected Manager manager;
 
-    private Set<Employee> workers;
+    protected Set<Employee> workers;
 
-    private List<Product> products;
+    protected List<Product> products;
 
+    void addProduct(Product newProduct) {
+        products.add(newProduct);
+    }
+
+    void addProducts(List<Product> newProducts) {
+        products.addAll(newProducts);
+    }
 
 }
